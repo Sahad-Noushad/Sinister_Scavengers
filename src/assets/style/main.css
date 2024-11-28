@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania');
+
+body{
+    font-family: 'Frijole';
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+body ::-webkit-scrollbar{
+    display: none;
+}
+
+/* Index page */
+
+.index {
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.index .smoke{
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+    opacity: 30%;
+    z-index: 0;
+    width: 100%;
+    animation: fadeInSmoke 5s;
+}
+
+@keyframes fadeInSmoke{
+    0% { opacity: 0; }
+  100% { opacity: 30%; }
+}
+
+.index .reaper{
+    /* display: none; */
+    width: 40%;
+    opacity: 80%;
+    position: absolute;
+    left: 30%;
+    z-index: -1;
+    top: 10%;
+    animation: fadeInReaper 5s;
+}
+
+@keyframes fadeInReaper{
+    0% { opacity: 0; }
+    20% {opacity: 0;}
+  100% { opacity: 80%; }
+}
+
+.index .intro{
+    letter-spacing: 2px;
+    text-align: center;
+    animation: FadeInText 10s;
+    cursor: default;
+    height: 100%;
+    padding-top: 30%;
+}
+
+.index .intro h2{
+    font-size: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 10px auto;
+}
+
+.index .intro h1{
+    font-family: 'Metal Mania';
+    font-size: 100px;
+    margin: 10px;
+    transition-duration: .5s;
+    cursor: pointer;
+    position: relative;
+}
+
+@keyframes FadeInText{
+    0% {opacity: 0;}
+    25% { opacity: 0; }
+  100% { opacity: 100%; }
+}
+
+.index .intro h1:hover{
+    color: red;
+}
