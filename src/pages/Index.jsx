@@ -1,6 +1,7 @@
 import React from 'react'
-import reaper from '../assets/images/reaper2.png'
-import smoke from '../assets/images/smoke3.png'
+import reaper from '../assets/images/reaper.png'
+import smoke from '../assets/images/smoke.png'
+import smokeaudio from '../assets/audio/smoke.mp3'
 
 export default function Index() {
     function redirect() {
@@ -22,12 +23,13 @@ export default function Index() {
             logo.style.color='red'
             logo.style.fontSize='30px'
             logo.style.position='absolute'
-            logo.style.top='3%'
-            logo.style.left='6%'
+            logo.style.top='20px'
+            logo.style.left='80px'
         },500)
         setTimeout(()=>{
             window.location.href='/home'
         },1500)
+        
     }
   return (
     <div className='index'>
